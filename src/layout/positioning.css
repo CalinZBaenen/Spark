@@ -1,0 +1,14 @@
+/**
+* Makes flex-items centered.
+*/
+*[data-centered] { justify-self:center; }
+
+
+
+/**
+* Makes elements sticky.
+*/
+*[data-sticky] {
+	position:-webkit-sticky;
+	position:sticky;
+}

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+
+
+
+
+/* Default `<table>` style. */
+table {
+	background-color:transparent;
+	border-collapse:collapse;
+	font-family:monospace;
+	display:block;
+	color:#000000;
+}
+
+
+
+/* Default `<td>` and `<th>` style. */
+td, th { background-color:#ffffff; }
+
+
+
+/* Make `<th>`s bold(er). */
+th { font-weight:bolder; }
+
+
+
+
+
+/* The default style for `<caption>`s, `<td>`s, and `<th>`s in a `<table>`. */
+table caption, table td, table th { border:1px solid #000000; }
+
+
+
+/* The default style for `<caption>`s in a `<table>`. */
+table caption {
+	background-color:#ffffff;
+	width:100%;
+}
+
+
+
+/* The default style for `<td>`s and `<th>`s in a `<table>`. */
+table td, table th { padding:0.25em; }
+
+
+
+
+
+/**
+* Creates a table-cutout, which hides the cell and its content.
+*/
+td[data-cutout] {
+	white-space-collapse:discard;
+	content-visibility:hidden;
+	visibility:hidden;
+	overflow:hidden;
+	border:none;
+	
+	background-color:transparent;
+	color:transparent;
+	
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	-webkit-user-drag:none;
+}
+
+td[data-cutout] * { display:none; }

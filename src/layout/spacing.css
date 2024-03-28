@@ -1,0 +1,44 @@
+/**
+* Gives elements the padding a letter should have.
+*/
+*[data-padding="letter"] { padding:1in; }
+
+
+
+/**
+* Applies horizontal `auto`-margins to all children elements.
+*/
+*[data-hamoc] > * {
+	margin-right:auto;
+	margin-left:auto;
+}
+
+
+
+/**
+* Applies vertical `auto`-margins to all children elements.
+*/
+*[data-vamoc] > * {
+	margin-bottom:auto;
+	margin-top:auto;
+}
+
+
+
+/**
+* Applies horizontal `auto`-margins to an element.
+*/
+*[data-ham] {
+	margin-right:auto;
+	margin-left:auto;
+}
+
+
+
+/**
+* Applies vertical `auto`-margins to an element.
+*/
+*[data-vam] {
+	margin-bottom:auto;
+	margin-top:auto;
+}

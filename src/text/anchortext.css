@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+
+
+
+
+/* Default style for `<a>`s. */
+a {
+	text-decoration:underline;
+	text-decoration:underline dashed currentColor;
+	color:currentColor;
+}
+
+
+
+
+
+/* Removes text-decoration from URLs that have no destination. */
+a[href=""], a:not([href]) { text-decoration:none; }
+
+
+
+/* Gives links a default color.  (Support for Mozilla.) */
+a:-moz-any-link {
+	color:#0000EE;
+	color:linktext;
+}
+
+/* Gives links a default color. */
+a:any-link {
+	color:#0000EE;
+	color:linktext;
+}
+
+
+
+/**
+* Recolors anchortext whose HRef has been visited.
+*/
+a:visited {
+	color:#551A8B;
+	color:visitedtext;
+}
+
+
+
+
+
+/**
+* Highlights the anchortext when it is focused.  
+* (Support for Mozilla.)
+*/
+a:-moz-any-link:focus, a:-moz-any-link:hover {
+	-moz-text-decoration-style:solid;
+	text-decoration-style:solid;
+	color:#EE1A00;
+	color:activetext;
+}
+
+/**
+* Highlights the anchortext when it is focused.
+*/
+a:any-link:focus, a:any-link:hover {
+	-moz-text-decoration-style:solid;
+	text-decoration-style:solid;
+	color:#EE1A00;
+	color:activetext;
+}
+
+
+
+
+
+/**
+* Gives all non-local links an outbound-arrow.
+*/
+a[data-ob-arrow]:any-link:not(:local-link) {
+	vertical-align:top;
+	font-weight:bolder;
+	font-size:0.625em;
+	position:fixed;
+	content:"↗";
+}

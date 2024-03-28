@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+
+
+
+
+/* Default style for dropdown menus. */
+select[data-dropdown], select[data-dropdown] *,
+div[data-dropdown], div[data-dropdown] * {
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	-webkit-user-drag:none;
+	
+	-moz-user-focus:normal;
+	nav-index:0;
+	outline:none;
+}
+
+/* Default style for all direct descendants of a dropdown menu. */
+select[data-dropdown] > *,
+div[data-dropdown] > * {
+	margin-bottom:0;
+	margin-top:0;
+	display:none;
+}
+
+
+
+/**
+* Gives a style to `<div>`-based dropdown menus.
+*/
+div[data-dropdown]:before {
+	font-weight:500;
+	content:"Select... ▼";
+	content:attr(aria-description) " ▼";
+}
+
+
+
+
+
+/* Shows the different options for a `<div>`-based dropdown menu. */
+select[data-dropdown]:focus-within > *,
+div[data-dropdown]:focus-within > * {
+	display:block;
+	display:revert;
+}
+
+
+
+/* Shows the different options for a `<div>`-based dropdown menu. */
+select[data-dropdown]:focus > *,
+div[data-dropdown]:focus > * {
+	display:block;
+	display:revert;
+}

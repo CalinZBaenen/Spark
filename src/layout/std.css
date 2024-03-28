@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+
+
+
+
+/* Default style for all elements. */
+* {
+	height:fit-content;
+	width:fit-content;
+	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+
+
+
+
+body, html {
+	overflow-y:visible;
+	overflow-x:hidden;
+	
+	-ms-flex-flow:column nowrap;
+	flex-flow:column nowrap;
+	
+	display:inline-block;
+	display:-ms-flexbox;
+	display:flex;
+	
+	padding:0;
+	margin:0;
+	
+	height:100%;
+	width:100%;
+}
+
+
+
+main {
+	-ms-flex-direction:column;
+	flex-direction:column;
+	flex-grow:1;
+}
+
+
+
+
+
+/**
+* Makes an element, and its children, undraggable.
+*/
+*[draggable="false"], *[draggable="false"] * {
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	-webkit-user-drag:none;
+}
+
+
+
+/**
+* Makes an element, and its children, draggable.
+*/
+*[draggable="true"], *[draggable="true"] * {
+	-webkit-user-select:auto;
+	-moz-user-select:auto;
+	-ms-user-select:auto;
+	user-select:auto;
+	-webkit-user-drag:auto;
+}
+
+
+
+/**
+* Makes this element fully (100%) wide.
+*/
+*[data-fullwidth] { width:100%; }

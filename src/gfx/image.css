@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+
+
+
+
+/**
+* Makes image-rendering for all child elements pixelated.  
+* (Keeps the image pixelated as it is upscaled, but blurs as it is downscaled.)
+*/
+*[data-pixelated-children] * {
+	-ms-interpolation-mode:nearest-neighbor;
+	image-rendering:pixelated;
+}
+
+
+
+/**
+* Makes image-rendering for all child elements crisp.  
+* (Keeps the image pixelated as it is both upscaled and downscaled.)
+*/
+*[data-crisp-children] * {
+	-ms-interpolation-mode:nearest-neighbor;
+	image-rendering:pixelated;
+	image-rendering:-moz-crisp-edges;
+	image-rendering:crisp-edges;
+}
+
+
+
+/**
+* Makes image-rendering pixelated.  
+* (Keeps the image pixelated as it is upscaled, but blurs as it is downscaled.)
+*/
+*[data-pixelated] {
+	-ms-interpolation-mode:nearest-neighbor;
+	image-rendering:pixelated;
+}
+
+
+
+/**
+* Makes image-rendering crisp.  
+* (Keeps the image pixelated as it is both upscaled and downscaled.)
+*/
+*[data-crisp] {
+	-ms-interpolation-mode:nearest-neighbor;
+	image-rendering:pixelated;
+	image-rendering:-moz-crisp-edges;
+	image-rendering:crisp-edges;
+}

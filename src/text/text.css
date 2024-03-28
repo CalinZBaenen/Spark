@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+
+
+
+
+/**
+* Makes the text justified.
+*/
+*[data-textstyle~="justified"] {
+	-moz-text-align-last:start;
+	-ms-text-align-last:start;
+	text-align-last:start;
+	text-align:justify;
+}
+
+
+
+/**
+* Makes the text centered.
+*/
+*[data-textstyle~="centered"] {
+	-moz-text-align-last:center;
+	-ms-text-align-last:center;
+	text-align-last:center;
+	text-align:center;
+}
+
+
+
+/**
+* Makes text-decoration dashed.
+*/
+*[data-textstyle~="dashed"] {
+	-moz-text-decoration-style:dashed;
+	text-decoration-style:dashed;
+}
+
+
+
+/**
+* Makes text-decoration dotted.
+*/
+*[data-textstyle~="dotted"] {
+	-moz-text-decoration-style:dotted;
+	text-decoration-style:dotted;
+}
+
+
+
+/**
+* Makes text-decoration doubled.
+*/
+*[data-textstyle~="double"] {
+	-moz-text-decoration-style:double;
+	text-decoration-style:double;
+}
+
+
+
+/**
+* Makes text-decoration wavy.
+*/
+*[data-textstyle="wavy"] {
+	-moz-text-decoration-style:wavy;
+	text-decoration-style:wavy;
+}
+
+
+
+/**
+* Makes text bold(er).
+*/
+*[data-textstyle~="b"] { font-weight:bolder; }
+
+
+
+/**
+* Makes text italic.
+*/
+*[data-textstyle~="i"] { font-style:italic; }
+
+
+
+/**
+* Gives text an overline.
+*/
+*[data-textstyle~="o"] {
+	-moz-text-decoration-line:overline;
+	text-decoration-line:overline;
+}
+
+
+
+/**
+* Gives text a strikethrough.
+*/
+*[data-textstyle~="s"] {
+	-moz-text-decoration-line:line-through;
+	text-decoration-line:line-through;
+}
+
+
+
+/**
+* Gives text an underline.
+*/
+*[data-textstyle~="u"] {
+	-moz-text-decoration-line:underline;
+	text-decoration-line:underline;
+}
+
+
+
+
+
+/**
+* Makes the text justified while centering the last line.
+*/
+*[data-textstyle~="justified"][data-textstyle~="centered"] {
+	-moz-text-align-last:center;
+	-ms-text-align-last:center;
+	text-align-last:center;
+	text-align:justify;
+}
+
+
+
+/**
+* Gives text an overline and a strikethrough.
+*/
+*[data-textstyle~="o"][data-textstyle~="s"] {
+	-moz-text-decoration-line:overline line-through;
+	text-decoration-line:overline line-through;
+}
+
+
+
+/**
+* Gives text an overline and an underline.
+*/
+*[data-textstyle~="o"][data-textstyle~="u"] {
+	-moz-text-decoration-line:overline underline;
+	text-decoration-line:overline underline;
+}
+
+
+
+/**
+* Gives text a strikethrough and an underline.
+*/
+*[data-textstyle~="s"][data-textstyle~="u"] {
+	-moz-text-decoration-line:line-through underline;
+	text-decoration-line:line-through underline;
+}
+
+
+
+
+
+/**
+* Gives text an overline, strikethrough, and underline.
+*/
+*[data-textstyle~="o"][data-textstyle~="s"][data-textstyle~="u"] {
+	-moz-text-decoration-line:overline line-through underline;
+	text-decoration-line:overline line-through underline;
+}

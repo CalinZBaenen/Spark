@@ -1,0 +1,80 @@
+/**
+* Makes the children of flexible containers evenly-spaced.
+*/
+*[data-flow~="evenly-spaced-children"] { justify-content:space-evenly; }
+
+
+
+/**
+* Gives an element a flexbox layout.
+*/
+*[data-flow~="flex"] {
+	display:block;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+}
+
+
+
+/**
+* Gives an element a grid layout.
+*/
+*[data-flow~="grid"] {
+	display:-moz-grid;
+	display:-ms-grid;
+	display:grid;
+}
+
+
+
+/**
+* Makes the flow of flex and grid containers go columnwise.
+*/
+*[data-flow~="col"] {
+	-ms-flex-direction:column;
+	flex-direction:column;
+	grid-auto-flow:column;
+}
+
+
+
+/**
+* Makes the flow of flex and grid containers go rowwise.
+*/
+*[data-flow~="row"] {
+	-ms-flex-direction:row;
+	flex-direction:row;
+	grid-auto-flow:row;
+}
+
+
+
+/**
+* Stretches items to fit.
+*/
+*[data-stf] { align-self:stretch; }
+
+
+
+
+
+*[data-flow~="col"][data-flow~="reverse"] {
+	-ms-flex-direction:column-reverse;
+	flex-direction:column-reverse;
+}
+
+
+
+*[data-flow~="col"][data-flow~="dense"] { grid-auto-flow:column dense; }
+
+
+
+*[data-flow~="row"][data-flow~="reverse"] {
+	-ms-flex-direction:row-reverse;
+	flex-direction:row-reverse;
+}
+
+
+
+*[data-flow~="row"][data-flow~="dense"] { grid-auto-flow:row dense; }

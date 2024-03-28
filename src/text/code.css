@@ -1,0 +1,10 @@
+/* Default display for codeblocks. */
+code, .code {
+	font-display:swap;
+	font-variant:normal;
+	font-family:monospace;
+	font-weight:500;
+	
+	white-space:pre;
+	text-wrap:nowrap;
+}
