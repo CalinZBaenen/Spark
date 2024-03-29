@@ -1,7 +1,30 @@
+@charset "UTF-8";
+
+
+
+
+
 /**
-* Makes flex-items centered.
+* Makes flex-items centered along the cross-axis.
 */
-*[data-centered] { justify-self:center; }
+*[data-centered="cross"] { align-self:center; }
+
+
+
+/**
+* Makes flex-items centered along both axes.
+*/
+*[data-centered="both"] {
+	justify-self:center;
+	align-self:center;
+}
+
+
+
+/**
+* Makes flex-items centered along the main-axis.
+*/
+*[data-centered="main"] { justify-self:center; }
 
 
 
@@ -12,3 +35,15 @@
 	position:-webkit-sticky;
 	position:sticky;
 }
+
+
+
+
+
+/**
+* @deprecated
+*
+* Makes flex-items centered along their main-axis.  
+* (Added for backwards compatibility with the previous version.)
+*/
+*[data-centered]:not([data-centered="cross"]):not([data-centered="both"]):not([data-centered="main"]) { justify-self:center; }

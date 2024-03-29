@@ -6,21 +6,25 @@
 
 
 /**
-* Gives an element a flexbox layout.
+* Gives an element a flexbox layout.  
+* (Uses standard `block`-layout if `flex` is not supported.)
 */
 *[data-flow~="flex"] {
 	display:block;
-	display:-webkit-flex;
 	display:-ms-flexbox;
+	display:flexbox;
+	display:-webkit-flex;
 	display:flex;
 }
 
 
 
 /**
-* Gives an element a grid layout.
+* Gives an element a grid layout.  
+* (Uses standard `block`-layout if `grid` is not supported.)
 */
 *[data-flow~="grid"] {
+	display:block;
 	display:-moz-grid;
 	display:-ms-grid;
 	display:grid;
@@ -51,7 +55,7 @@
 
 
 /**
-* Stretches items to fit.
+* Stretches flex-items to fit their container.
 */
 *[data-stf] { align-self:stretch; }
 
@@ -59,22 +63,51 @@
 
 
 
-*[data-flow~="col"][data-flow~="reverse"] {
+*[data-flow~="reverse"][data-flow~="col"] {
 	-ms-flex-direction:column-reverse;
 	flex-direction:column-reverse;
 }
 
 
 
-*[data-flow~="col"][data-flow~="dense"] { grid-auto-flow:column dense; }
+/**
+* Makes an element inline and gives it a flexbox layout.  
+* (Uses `inline-block` if `inline-flex` is not supported.)
+*/
+*[data-flow~="inline"][data-flow~="flex"] {
+	display:inline-block;
+	display:-ms-inline-flexbox;
+	display:inline-flexbox;
+	display:-webkit-inline-box;
+	display:-webkit-inline-flex;
+	display:-moz-inline-box;
+	display:inline-flex;
+}
 
 
 
-*[data-flow~="row"][data-flow~="reverse"] {
+/**
+* Makes an element inline and gives it a grid layout.  
+* (Uses `inline-block` if `inline-grid` is not supported.)
+*/
+*[data-flow~="inline"][data-flow~="grid"] {
+	display:inline-block;
+	display:-moz-inline-grid;
+	display:-ms-inline-grid;
+	display:inline-grid;
+}
+
+
+
+*[data-flow~="reverse"][data-flow~="row"] {
 	-ms-flex-direction:row-reverse;
 	flex-direction:row-reverse;
 }
 
 
 
-*[data-flow~="row"][data-flow~="dense"] { grid-auto-flow:row dense; }
+*[data-flow~="dense"][data-flow~="col"] { grid-auto-flow:column dense; }
+
+
+
+*[data-flow~="dense"][data-flow~="row"] { grid-auto-flow:row dense; }

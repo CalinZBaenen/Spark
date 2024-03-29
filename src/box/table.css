@@ -48,12 +48,41 @@ table td, table th { padding:0.25em; }
 
 
 /**
-* Creates a table-cutout, which hides the cell and its content.
+* Creates a table-cell-cutout, which hides the cell and its content.
 */
 td[data-cutout] {
 	white-space-collapse:discard;
 	content-visibility:hidden;
 	visibility:hidden;
+	overflow:-moz-hidden-unscrollable;
+	overflow:hidden;
+	border:none;
+	
+	background-color:transparent;
+	max-height:min-content;
+	max-width:min-content;
+	height:min-content;
+	width:min-content;
+	color:transparent;
+	
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	-webkit-user-drag:none;
+}
+
+td[data-cutout] * { display:none; }
+
+
+
+/**
+* Creates a table-row-cutout, which hides the row and its content.
+*/
+tr[data-cutout] {
+	white-space-collapse:discard;
+	visibility:hidden;
+	overflow:-moz-hidden-unscrollable;
 	overflow:hidden;
 	border:none;
 	
@@ -67,4 +96,12 @@ td[data-cutout] {
 	-webkit-user-drag:none;
 }
 
-td[data-cutout] * { display:none; }
+tr[data-cutout] * {
+	content-visibility:hidden;
+	background-color:transparent;
+	visibility:hidden;
+	border:none;
+	color:transparent;
+}
+
+tr[data-cutout] * * { display:none; }

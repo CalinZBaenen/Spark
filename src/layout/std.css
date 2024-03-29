@@ -27,6 +27,7 @@ body, html {
 	
 	display:inline-block;
 	display:-ms-flexbox;
+	display:flexbox;
 	display:flex;
 	
 	padding:0;
@@ -38,11 +39,7 @@ body, html {
 
 
 
-main {
-	-ms-flex-direction:column;
-	flex-direction:column;
-	flex-grow:1;
-}
+main { flex-grow:1; }
 
 
 
@@ -78,3 +75,17 @@ main {
 * Makes this element fully (100%) wide.
 */
 *[data-fullwidth] { width:100%; }
+
+
+
+/**
+* Makes an element an inline-block.
+*/
+*[data-flow~="iblock"] { display:inline-block; }
+
+
+
+/**
+* Makes an element inline.
+*/
+*[data-flow~="inline"] { display:inline; }
