@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en-us">
+	<head>
+		<meta http-equiv="Content-Type" charset="UTF-8" content="text/html; charset=UTF-8" />
+		<title>Text Demonstration</title>
+		
+		<link href="../src/layout/prelude.css" type="text/css" rel="stylesheet" />
+		<link href="../src/text/prelude.css" type="text/css" rel="stylesheet" />
+		
+		<link href="./site_specific.css" type="text/css" rel="stylesheet" />
+	</head>
+	
+	
+	
+	<body data-padding="letter">
+		<h1>Top-Level Header</h1>
+		
+		<section>
+			<h2>Heading 2</h2>
+			<p data-textstyle="b u">This text is bold and underlined.</p>
+			<p data-textstyle="b+">This is <u>the</u> boldest text.</p>
+			<p>This text is normal.</p>
+		</section>
+		
+		<section>
+			<h2>Another H2</h2>
+			<h3>H3</h3>
+			<p data-textstyle="wavy u">Wavy Underline</p>
+			<h4>H4</h4>
+			<a>This is anchortext without a hyperlink.</a>
+			<h5>H5</h5>
+			<a data-ob-arrow href="./table.html">Table Demonstration</a>
+			<h6>H6</h6>
+			<a data-ob-arrow href="https://www.github.com/CalinZBaenen/Spark">
+				Spark GitHub Repository
+			</a>
+		</section>
+		
+		<section>
+			<h2>The Code Section</h2>
+			
+			<p>The first paragraph used <code>data-textstyle="b u"</code>.</p>
+		</section>
+		
+		<hr />
+		
+		<div style="background-color:white; width:30em;">
+			<p data-textstyle="hanging">
+				The first line is normal,<br />
+				but the second and third line is hanging, even if it's due to wrap.
+			</p>
+			<p>(Note: this relies on the browser supporting <code>text-indent</code>.)</p>
+		</div>
+	</body>
+</html>

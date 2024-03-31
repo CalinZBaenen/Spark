@@ -29,6 +29,18 @@
 
 
 /**
+* Makes subsequent lines of a paragraph hang.
+*/
+*[data-textstyle~="hanging"] {
+	--S-tabsize:1em;
+	
+	text-indent:1em hanging;
+	text-indent:var(--S-tabsize) hanging;
+}
+
+
+
+/**
 * Makes text-decoration dashed.
 */
 *[data-textstyle~="dashed"] {
@@ -61,7 +73,7 @@
 /**
 * Makes text-decoration wavy.
 */
-*[data-textstyle="wavy"] {
+*[data-textstyle~="wavy"] {
 	-moz-text-decoration-style:wavy;
 	text-decoration-style:wavy;
 }
@@ -69,9 +81,22 @@
 
 
 /**
+* Makes text as bold as it can be.
+*/
+*[data-textstyle~="b+"] {
+	font-synthesis-weight:auto;
+	font-weight:900;
+}
+
+
+
+/**
 * Makes text bold(er).
 */
-*[data-textstyle~="b"] { font-weight:bolder; }
+*[data-textstyle~="b"] {
+	font-weight:700;
+	font-weight:bolder;
+}
 
 
 
@@ -164,4 +189,30 @@
 *[data-textstyle~="o"][data-textstyle~="s"][data-textstyle~="u"] {
 	-moz-text-decoration-line:overline line-through underline;
 	text-decoration-line:overline line-through underline;
+}
+
+
+
+
+
+/* Default display for code. */
+code, *[data-code] {
+	font-display:swap;
+	font-variant:normal;
+	font-family:monospace;
+	font-weight:500;
+	font-size:1.1em;
+	text-wrap:nowrap;
+}
+
+
+
+/* Default look for horizontal-rules. */
+hr {
+	border-style:solid;
+	border-width:0.5px;
+	width:100%;
+	
+	color:black;
+	color:currentColor;
 }

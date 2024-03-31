@@ -22,13 +22,13 @@ a[href=""], a:not([href]) { text-decoration:none; }
 
 /* Gives links a default color.  (Support for Mozilla.) */
 a:-moz-any-link {
-	color:#0000EE;
+	color:rgb(0, 0, 238);
 	color:linktext;
 }
 
 /* Gives links a default color. */
 a:any-link {
-	color:#0000EE;
+	color:rgb(0, 0, 238);
 	color:linktext;
 }
 
@@ -38,7 +38,7 @@ a:any-link {
 * Recolors anchortext whose HRef has been visited.
 */
 a:visited {
-	color:#551A8B;
+	color:rgb(85, 26, 139);
 	color:visitedtext;
 }
 
@@ -53,7 +53,7 @@ a:visited {
 a:-moz-any-link:focus, a:-moz-any-link:hover {
 	-moz-text-decoration-style:solid;
 	text-decoration-style:solid;
-	color:#EE1A00;
+	color:rgb(238, 26, 0);
 	color:activetext;
 }
 
@@ -63,7 +63,7 @@ a:-moz-any-link:focus, a:-moz-any-link:hover {
 a:any-link:focus, a:any-link:hover {
 	-moz-text-decoration-style:solid;
 	text-decoration-style:solid;
-	color:#EE1A00;
+	color:rgb(238, 26, 0);
 	color:activetext;
 }
 

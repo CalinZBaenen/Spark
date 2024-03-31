@@ -6,15 +6,28 @@
 
 <html lang="en-us">
 	<head>
+		<meta http-equiv="Content-Type" charset="UTF-8" content="text/html; charset=UTF-8" />
+		<title>Table Demonstration</title>
+		
 		<link href="../src/layout/prelude.css" type="text/css" rel="stylesheet" />
 		<link href="../src/box/table.css" type="text/css" rel="stylesheet" />
 		
 		<link href="./site_specific.css" type="text/css" rel="stylesheet" />
+		
+		<style>
+			#mario td {
+				border:none;
+				height:15px;
+				width:15px;
+			}
+			
+			#mario:hover tr:not([data-cutout]) td { border:1px solid black; }
+		</style>
 	</head>
 	
 	
 	
-	<body data-padding="letter" style="background-color:#AAAAFF;">
+	<body data-padding="letter">
 		<!-- Table of colors. -->
 		<table>
 			<caption>Colors</caption>

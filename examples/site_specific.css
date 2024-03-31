@@ -1,23 +1,20 @@
-/*
-* Spacing between tables and other things.
-*/
+/* Spacing between tables and other things. */
 table + * { margin-top:1.5rem; }
 
 
-/*
-* Spacing between paragraphs and other things.
-*/
+/* Background color. */
+body { background-color:rgb(170, 170, 255); }
+
+
+/* Default margins for headers. */
+h1 { margin-bottom:1.5em; }
+h2, h3, h4 { margin-bottom:0.8em; }
+h5, h6 { margin-bottom:0.4em; }
+
+
+/* Spacing between paragraphs and other things. */
 p + * { margin-top:1.25em; }
 
 
-/*
-* Makes table-cells in the element with the ID `mario` pixel-like and
-*  borderless.
-*/
-#mario td {
-	border:none;
-	height:15px;
-	width:15px;
-}
-
-#mario:hover tr:not([data-cutout]) td { border:1px solid black; }
+/* Spacing between sections. */
+section + section { margin-top:1em; }

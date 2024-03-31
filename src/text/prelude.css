@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
 @import url(./anchortext.css);    /* Styles for anchortext.   */
+@import url(./header.css);        /* Styles for headers.      */
 @import url(./code.css);          /* Styles for codeblocks.   */
 @import url(./text.css);          /* General styles for text. */

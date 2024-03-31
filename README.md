@@ -26,8 +26,8 @@ Spark is created to be simple to use and support as many web-browsers as
 
 ## Information
 
-    Last Updated: 2024/03/29
-    Version:      2.0.0
+    Last Updated: 2024/03/31
+    Version:      2.1.0
 
 ## What does Spark provide styles for?
 
@@ -46,3 +46,9 @@ Spark provides styles for many things:
 
 - Add more spacing options (for padding).  
 - Add more examples.
+
+## Cons
+
+- Because of its desire to support as many browsers as possible, the CSS
+   files are bigger than they would otherwise be, meaning they take up more
+   space and are (likelty to be) less performant.
