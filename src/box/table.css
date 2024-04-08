@@ -48,6 +48,8 @@ table td, table th { padding:0.25em; }
 
 
 /**
+* @uncascadable
+*
 * Creates a table-cell-cutout, which hides the cell and its content.
 */
 td[data-cutout] {
@@ -77,6 +79,8 @@ td[data-cutout] * { display:none; }
 
 
 /**
+* @uncascadable
+*
 * Creates a table-row-cutout, which hides the row and its content.
 */
 tr[data-cutout] {
@@ -99,7 +103,6 @@ tr[data-cutout] {
 tr[data-cutout] * {
 	content-visibility:hidden;
 	background-color:transparent;
-	visibility:hidden;
 	border:none;
 	color:transparent;
 }

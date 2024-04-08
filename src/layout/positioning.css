@@ -7,14 +7,14 @@
 /**
 * Makes flex-items centered along the cross-axis.
 */
-*[data-centered="cross"] { align-self:center; }
+*[data-centered="cross"], *[data-cascade~="centered"][data-centered="cross"] * { align-self:center; }
 
 
 
 /**
 * Makes flex-items centered along both axes.
 */
-*[data-centered="both"] {
+*[data-centered="both"], *[data-cascade~="centered"][data-centered="both"] * {
 	justify-self:center;
 	align-self:center;
 }
@@ -24,17 +24,7 @@
 /**
 * Makes flex-items centered along the main-axis.
 */
-*[data-centered="main"] { justify-self:center; }
-
-
-
-/**
-* Makes elements sticky.
-*/
-*[data-sticky] {
-	position:-webkit-sticky;
-	position:sticky;
-}
+*[data-centered="main"], *[data-cascade~="centered"][data-centered="main"] * { justify-self:center; }
 
 
 
@@ -46,4 +36,7 @@
 * Makes flex-items centered along their main-axis.  
 * (Added for backwards compatibility with the previous version.)
 */
-*[data-centered]:not([data-centered="cross"]):not([data-centered="both"]):not([data-centered="main"]) { justify-self:center; }
+*[data-centered]:not([data-centered="cross"]):not([data-centered="both"]):not([data-centered="main"]),
+*[data-cascade~="centered"][data-centered]:not([data-centered="cross"]):not([data-centered="both"]):not([data-centered="main"]) {
+	justify-self:center;
+}

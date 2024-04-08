@@ -28,9 +28,7 @@ div[data-dropdown] > * {
 
 
 
-/**
-* Gives a style to `<div>`-based dropdown menus.
-*/
+/* Gives a style to `<div>`-based dropdown menus. */
 div[data-dropdown]:before {
 	font-weight:500;
 	content:"Select... ▼";

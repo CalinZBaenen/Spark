@@ -1,10 +1,19 @@
-- Added `text.html` to the examples.  
-- Added a section for cons in `README.md`.
+- Added the *Cons* section to the README file's table of contents.  
+- Gave Spark its (new) logo.
 
-- Moved the code-related text styles into `text/text.css`.  
-- Added the value `hanging` to `data-textstyle`, which indents subsequent
-   lines, the size of which can be adjusted with `--S-tabsize`.  
-- Added the `b+` to `data-textstyle`, which makes text as bold as allowed.  
-- Added a `header.css` file.  
-- Changed the `#RRGGBB`-formatted colors to `rgb(R, G, B)` for wider
-   browser support.
+- Headings, group one to six, no longer have their font size changed by
+   default.  
+- The body no longer uses a flex layout by default.  
+- Added `indented` value for `data-textstyle`.  
+- Removed `data-hanging` and added the `hanging` adjective (of `indented`)
+   for `data-textstyle`.  
+- Removed `data-fullwidth` and `data-sticky`.  
+- Removed the `iblock` and `inline` values for the `data-flow` attribute.  
+- Added `data-cascade`, which allows you to apply any of same styles to all
+   of an element's descendants — the styles to cascade are specified by
+   using an attribute's name as a value.  
+- Removed `data-pixelated-children` and `data-crisp-children` in favor of
+   the behavior provided by `data-cascade`.  
+- Changed the default style of `<hr>`s in `text/text.css`.  
+- Added more support for the flex layout (using `data-flow="flex"`) in
+   older browsers.

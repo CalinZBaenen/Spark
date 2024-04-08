@@ -1,12 +1,15 @@
 # Spark
 
+![<Image of Spark's logo.>](./logo.svg)
+
 ## Table of Contents
 
 [*What is Spark?*](#what-is-spark)                                            \
 [*Why use Spark?*](#why-use-spark)                                            \
 [*Information*](#information)                                                 \
 [*What does Spark provide styles for?*](#what-does-spark-provide-styles-for)  \
-[*Roadmap*](#roadmap)
+[*Roadmap*](#roadmap)                                                         \
+[*Cons*](#cons)
 
 ## What is Spark?
 
@@ -26,20 +29,21 @@ Spark is created to be simple to use and support as many web-browsers as
 
 ## Information
 
-    Last Updated: 2024/03/31
-    Version:      2.1.0
+    Last Updated: 2024/04/07
+    Code Size:    84KB
+    Version:      2.2.0
 
 ## What does Spark provide styles for?
 
-Spark provides styles for many things:  
- - Dropdown menus.  
- - Tables.  
- - Images.  
- - Flex and grid items.  
- - Positioning.  
- - Margins and padding.  
+Spark provides styles for many things, including:  
+ - Dropdown Menus  
+ - Tables  
+ - Images  
+ - Flex and Grid Items.  
+ - Positioning  
+ - Margins and Padding  
  - Miscellaneous, common, elements.  
- - Text and anchortext.  
+ - Text and Anchortext.  
  - Code.
 
 ## Roadmap

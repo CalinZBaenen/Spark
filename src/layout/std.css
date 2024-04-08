@@ -21,15 +21,6 @@
 body, html {
 	overflow-y:visible;
 	overflow-x:hidden;
-	
-	-ms-flex-flow:column nowrap;
-	flex-flow:column nowrap;
-	
-	display:inline-block;
-	display:-ms-flexbox;
-	display:flexbox;
-	display:flex;
-	
 	padding:0;
 	margin:0;
 	
@@ -39,14 +30,12 @@ body, html {
 
 
 
-main { flex-grow:1; }
-
-
-
 
 
 /**
-* Makes an element, and its children, undraggable.
+* @uncascadable
+*
+* Makes an element, and all its descendants, undraggable.
 */
 *[draggable="false"], *[draggable="false"] * {
 	-webkit-user-select:none;
@@ -59,7 +48,9 @@ main { flex-grow:1; }
 
 
 /**
-* Makes an element, and its children, draggable.
+* @uncascadable
+*
+* Makes an element, and all its descendants, draggable.
 */
 *[draggable="true"], *[draggable="true"] * {
 	-webkit-user-select:auto;
@@ -68,24 +59,3 @@ main { flex-grow:1; }
 	user-select:auto;
 	-webkit-user-drag:auto;
 }
-
-
-
-/**
-* Makes this element fully (100%) wide.
-*/
-*[data-fullwidth] { width:100%; }
-
-
-
-/**
-* Makes an element an inline-block.
-*/
-*[data-flow~="iblock"] { display:inline-block; }
-
-
-
-/**
-* Makes an element inline.
-*/
-*[data-flow~="inline"] { display:inline; }

@@ -72,9 +72,12 @@ a:any-link:focus, a:any-link:hover {
 
 
 /**
+* @experimental
+*
 * Gives all non-local links an outbound-arrow.
 */
-a[data-ob-arrow]:any-link:not(:local-link) {
+a[data-ob-arrow]:any-link:not(:local-link),
+*[data-cascade~="ob-arrow"][data-ob-arrow] *a:any-link:not(:local-link) {
 	vertical-align:top;
 	font-weight:bolder;
 	font-size:0.625em;

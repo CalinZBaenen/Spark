@@ -1,11 +1,13 @@
 /**
 * Gives elements the padding a letter should have.
 */
-*[data-padding="letter"] { padding:1in; }
+*[data-padding="letter"], *[data-cascade~="padding"][data-padding="letter"] { padding:1in; }
 
 
 
 /**
+* @uncascadable
+*
 * Applies horizontal `auto`-margins to all children elements.
 */
 *[data-hamoc] > * {
@@ -16,6 +18,8 @@
 
 
 /**
+* @uncascadable
+*
 * Applies vertical `auto`-margins to all children elements.
 */
 *[data-vamoc] > * {
@@ -28,7 +32,7 @@
 /**
 * Applies horizontal `auto`-margins to an element.
 */
-*[data-ham] {
+*[data-ham], *[data-cascade~="ham"][data-ham] * {
 	margin-right:auto;
 	margin-left:auto;
 }
@@ -38,7 +42,7 @@
 /**
 * Applies vertical `auto`-margins to an element.
 */
-*[data-vam] {
+*[data-vam], *[data-cascade~="vam"][data-vam] * {
 	margin-bottom:auto;
 	margin-top:auto;
 }

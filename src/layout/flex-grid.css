@@ -1,7 +1,15 @@
 /**
+* Stretches flex-items to fit their container.
+*/
+*[data-align="stretch"], *[data-cascade~="align"][data-align="stretch"] * { align-self:stretch; }
+
+
+
+/**
 * Makes the children of flexible containers evenly-spaced.
 */
-*[data-flow~="evenly-spaced-children"] { justify-content:space-evenly; }
+*[data-flow~="evenly-spaced-children"],
+*[data-cascade~="flow"][data-flow~="evenly-spaced-children"] * { justify-content:space-evenly; }
 
 
 
@@ -9,8 +17,10 @@
 * Gives an element a flexbox layout.  
 * (Uses standard `block`-layout if `flex` is not supported.)
 */
-*[data-flow~="flex"] {
+*[data-flow~="flex"], *[data-cascade~="flow"][data-flow~="flex"] * {
 	display:block;
+	display:-webkit-box;
+	display:-moz-box;
 	display:-ms-flexbox;
 	display:flexbox;
 	display:-webkit-flex;
@@ -23,7 +33,7 @@
 * Gives an element a grid layout.  
 * (Uses standard `block`-layout if `grid` is not supported.)
 */
-*[data-flow~="grid"] {
+*[data-flow~="grid"], *[data-cascade~="flow"][data-flow~="grid"] * {
 	display:block;
 	display:-moz-grid;
 	display:-ms-grid;
@@ -35,7 +45,7 @@
 /**
 * Makes the flow of flex and grid containers go columnwise.
 */
-*[data-flow~="col"] {
+*[data-flow~="col"], *[data-cascade~="flow"][data-flow="col"] * {
 	-ms-flex-direction:column;
 	flex-direction:column;
 	grid-auto-flow:column;
@@ -46,7 +56,7 @@
 /**
 * Makes the flow of flex and grid containers go rowwise.
 */
-*[data-flow~="row"] {
+*[data-flow~="row"], *[data-cascade~="flow"][data-flow~="row"] * {
 	-ms-flex-direction:row;
 	flex-direction:row;
 	grid-auto-flow:row;
@@ -54,18 +64,20 @@
 
 
 
-/**
-* Stretches flex-items to fit their container.
-*/
-*[data-stf] { align-self:stretch; }
 
 
-
-
-
-*[data-flow~="reverse"][data-flow~="col"] {
+*[data-flow~="reverse"][data-flow~="col"],
+*[data-cascade~="flow"][data-flow~="reverse"][data-flow~="col"] * {
 	-ms-flex-direction:column-reverse;
 	flex-direction:column-reverse;
+}
+
+
+
+*[data-flow~="reverse"][data-flow~="row"],
+*[data-cascade~="flow"][data-flow~="reverse"][data-flow~="row"] * {
+	-ms-flex-direction:row-reverse;
+	flex-direction:row-reverse;
 }
 
 
@@ -74,13 +86,14 @@
 * Makes an element inline and gives it a flexbox layout.  
 * (Uses `inline-block` if `inline-flex` is not supported.)
 */
-*[data-flow~="inline"][data-flow~="flex"] {
+*[data-flow~="inline"][data-flow~="flex"],
+*[data-cascade~="flow"][data-flow~="inline"][data-flow~="flex"] * {
 	display:inline-block;
+	display:-webkit-inline-box;
+	display:-moz-inline-box;
 	display:-ms-inline-flexbox;
 	display:inline-flexbox;
-	display:-webkit-inline-box;
 	display:-webkit-inline-flex;
-	display:-moz-inline-box;
 	display:inline-flex;
 }
 
@@ -90,7 +103,8 @@
 * Makes an element inline and gives it a grid layout.  
 * (Uses `inline-block` if `inline-grid` is not supported.)
 */
-*[data-flow~="inline"][data-flow~="grid"] {
+*[data-flow~="inline"][data-flow~="grid"],
+*[data-cascade~="flow"][data-flow~="inline"][data-flow~="grid"] * {
 	display:inline-block;
 	display:-moz-inline-grid;
 	display:-ms-inline-grid;
@@ -99,15 +113,16 @@
 
 
 
-*[data-flow~="reverse"][data-flow~="row"] {
-	-ms-flex-direction:row-reverse;
-	flex-direction:row-reverse;
-}
+/**
+* Makes a grid's (column) layout (more) compact.
+*/
+*[data-flow~="dense"][data-flow~="col"],
+*[data-cascade~="flow"][data-flow~="dense"][data-flow~="col"] * { grid-auto-flow:column dense; }
 
 
 
-*[data-flow~="dense"][data-flow~="col"] { grid-auto-flow:column dense; }
-
-
-
-*[data-flow~="dense"][data-flow~="row"] { grid-auto-flow:row dense; }
+/**
+* Makes a grid's (row) layout (more) compact.
+*/
+*[data-flow~="dense"][data-flow~="row"],
+*[data-cascade~="flow"][data-flow~="dense"][data-flow~="row"] * { grid-auto-flow:row dense; }

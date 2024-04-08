@@ -5,6 +5,8 @@
 
 
 /**
+* @uncascadable
+*
 * Makes the text justified.
 */
 *[data-textstyle~="justified"] {
@@ -17,6 +19,8 @@
 
 
 /**
+* @uncascadable
+*
 * Makes the text centered.
 */
 *[data-textstyle~="centered"] {
@@ -29,13 +33,15 @@
 
 
 /**
-* Makes subsequent lines of a paragraph hang.
+* @uncascadable
+*
+* Makes the text indented. (On the first line only by default.)
 */
-*[data-textstyle~="hanging"] {
+*[data-textstyle~="indented"] {
 	--S-tabsize:1em;
 	
-	text-indent:1em hanging;
-	text-indent:var(--S-tabsize) hanging;
+	text-indent:1em;
+	text-indent:var(--S-tabsize);
 }
 
 
@@ -43,7 +49,7 @@
 /**
 * Makes text-decoration dashed.
 */
-*[data-textstyle~="dashed"] {
+*[data-textstyle~="dashed"], *[data-cascade~="textstyle"][data-textstyle~="dashed"] * {
 	-moz-text-decoration-style:dashed;
 	text-decoration-style:dashed;
 }
@@ -53,7 +59,7 @@
 /**
 * Makes text-decoration dotted.
 */
-*[data-textstyle~="dotted"] {
+*[data-textstyle~="dotted"], *[data-cascade~="textstyle"][data-textstyle~="dotted"] * {
 	-moz-text-decoration-style:dotted;
 	text-decoration-style:dotted;
 }
@@ -63,7 +69,7 @@
 /**
 * Makes text-decoration doubled.
 */
-*[data-textstyle~="double"] {
+*[data-textstyle~="double"], *[data-cascade~="textstyle"][data-textstyle~="double"] * {
 	-moz-text-decoration-style:double;
 	text-decoration-style:double;
 }
@@ -71,9 +77,24 @@
 
 
 /**
+* @uncascadale
+* 
+* Default display for code. */
+*[data-textstyle~="code"] {
+	font-display:swap;
+	font-variant:normal;
+	font-family:monospace;
+	font-weight:500;
+	font-size:1.1em;
+	text-wrap:nowrap;
+}
+
+
+
+/**
 * Makes text-decoration wavy.
 */
-*[data-textstyle~="wavy"] {
+*[data-textstyle~="wavy"], *[data-cascade~="textstyle"][data-textstyle~="wavy"] * {
 	-moz-text-decoration-style:wavy;
 	text-decoration-style:wavy;
 }
@@ -81,6 +102,8 @@
 
 
 /**
+* @uncascadable
+*
 * Makes text as bold as it can be.
 */
 *[data-textstyle~="b+"] {
@@ -91,6 +114,8 @@
 
 
 /**
+* @uncascadable
+*
 * Makes text bold(er).
 */
 *[data-textstyle~="b"] {
@@ -101,6 +126,8 @@
 
 
 /**
+* @uncascadable
+*
 * Makes text italic.
 */
 *[data-textstyle~="i"] { font-style:italic; }
@@ -110,7 +137,7 @@
 /**
 * Gives text an overline.
 */
-*[data-textstyle~="o"] {
+*[data-textstyle~="o"], *[data-cascade~="textstyle"][data-textstyle~="o"] * {
 	-moz-text-decoration-line:overline;
 	text-decoration-line:overline;
 }
@@ -120,7 +147,7 @@
 /**
 * Gives text a strikethrough.
 */
-*[data-textstyle~="s"] {
+*[data-textstyle~="s"], *[data-cascade~="textstyle"][data-textstyle~="s"] * {
 	-moz-text-decoration-line:line-through;
 	text-decoration-line:line-through;
 }
@@ -130,7 +157,7 @@
 /**
 * Gives text an underline.
 */
-*[data-textstyle~="u"] {
+*[data-textstyle~="u"], *[data-cascade~="textstyle"][data-textstyle~="u"] * {
 	-moz-text-decoration-line:underline;
 	text-decoration-line:underline;
 }
@@ -140,6 +167,8 @@
 
 
 /**
+* @uncascadable
+*
 * Makes the text justified while centering the last line.
 */
 *[data-textstyle~="justified"][data-textstyle~="centered"] {
@@ -152,9 +181,22 @@
 
 
 /**
+* @uncascadable
+*
+* Makes subsequent lines of a paragraph hang.
+*/
+*[data-textstyle~="hanging"][data-textstyle~="indented"] {
+	text-indent:1em hanging;
+	text-indent:var(--S-tabsize) hanging;
+}
+
+
+
+/**
 * Gives text an overline and a strikethrough.
 */
-*[data-textstyle~="o"][data-textstyle~="s"] {
+*[data-textstyle~="o"][data-textstyle~="s"],
+*[data-cascade~="textstyle"][data-textstyle~="o"][data-textstyle~="s"] * {
 	-moz-text-decoration-line:overline line-through;
 	text-decoration-line:overline line-through;
 }
@@ -164,7 +206,8 @@
 /**
 * Gives text an overline and an underline.
 */
-*[data-textstyle~="o"][data-textstyle~="u"] {
+*[data-textstyle~="o"][data-textstyle~="u"],
+*[data-cascade~="textstyle"][data-textstyle~="o"][data-textstyle~="u"] * {
 	-moz-text-decoration-line:overline underline;
 	text-decoration-line:overline underline;
 }
@@ -174,7 +217,8 @@
 /**
 * Gives text a strikethrough and an underline.
 */
-*[data-textstyle~="s"][data-textstyle~="u"] {
+*[data-textstyle~="s"][data-textstyle~="u"],
+*[data-cascade~="textstyle"][data-textstyle~="s"][data-textstyle~="u"] * {
 	-moz-text-decoration-line:line-through underline;
 	text-decoration-line:line-through underline;
 }
@@ -186,7 +230,8 @@
 /**
 * Gives text an overline, strikethrough, and underline.
 */
-*[data-textstyle~="o"][data-textstyle~="s"][data-textstyle~="u"] {
+*[data-textstyle~="o"][data-textstyle~="s"][data-textstyle~="u"],
+*[data-cascade~="textstyle"][data-textstyle~="o"][data-textstyle~="s"][data-textstyle~="u"] {
 	-moz-text-decoration-line:overline line-through underline;
 	text-decoration-line:overline line-through underline;
 }
@@ -195,24 +240,14 @@
 
 
 
-/* Default display for code. */
-code, *[data-code] {
-	font-display:swap;
-	font-variant:normal;
-	font-family:monospace;
-	font-weight:500;
-	font-size:1.1em;
-	text-wrap:nowrap;
-}
-
-
-
 /* Default look for horizontal-rules. */
 hr {
-	border-style:solid;
-	border-width:0.5px;
+	border:none;
+	height:0.5px;
 	width:100%;
 	
+	background-color:black;
+	background-color:currentColor;
 	color:black;
 	color:currentColor;
 }
