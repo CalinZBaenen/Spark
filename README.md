@@ -29,7 +29,7 @@ Spark is created to be simple to use and support as many web-browsers as
 
 ## Information
 
-    Last Updated: 2024/04/07
+    Last Updated: 2024/04/10
     Code Size:    84KB
     Version:      2.3.0
 
