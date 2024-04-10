@@ -1,7 +1,20 @@
+@charset "UTF-8";
+
+
+
+
+
 /**
 * Gives elements the padding a letter should have.
 */
 *[data-padding="letter"], *[data-cascade~="padding"][data-padding="letter"] { padding:1in; }
+
+
+
+/**
+* Gives elements a padding the size of (about) one character.
+*/
+*[data-padding="char"], *[data-cascade~="padding"][data-padding="char"] { padding:1em; }
 
 
 

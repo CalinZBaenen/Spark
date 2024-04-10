@@ -4,15 +4,17 @@
 
 
 
-<html lang="en-us">
+<html lang="en-US">
 	<head>
 		<meta http-equiv="Content-Type" charset="UTF-8" content="text/html; charset=UTF-8" />
+		<meta content="initial-scale=1, height=device-height, width=device-width" name="viewport" />
+		
 		<title>Text Demonstration</title>
 		
 		<link href="../src/layout/prelude.css" type="text/css" rel="stylesheet" />
 		<link href="../src/text/prelude.css" type="text/css" rel="stylesheet" />
 		
-		<link href="./site_specific.css" type="text/css" rel="stylesheet" />
+		<link href="./.assets/site_specific.css" type="text/css" rel="stylesheet" />
 	</head>
 	
 	
@@ -22,9 +24,9 @@
 		
 		<section>
 			<h2>Heading 2</h2>
-			<p data-textstyle="b u">This text is bold and underlined.</p>
-			<p data-textstyle="b+">This is <u>the</u> boldest text.</p>
 			<p>This text is normal.</p>
+			<p data-textstyle="b u">This text is bold and underlined.</p>
+			<p data-textstyle="b+">This text <u>should</u> be the boldest.</p>
 		</section>
 		
 		<section>
@@ -44,17 +46,25 @@
 		<section>
 			<h2>The Code Section</h2>
 			
-			<p>The first paragraph used <code>data-textstyle="b u"</code>.</p>
+			<p>The second paragraph used <code>data-textstyle="b u"</code>.</p>
+			<code>
+				fn main() {<br />
+				&nbsp;&nbsp;println!("Hello, world!");<br />
+				}
+			</code>
 		</section>
 		
 		<hr />
 		
-		<div style="background-color:white; width:30em;">
+		<div data-padding="char" style="background-color:white; width:30em;">
 			<p data-textstyle="hanging">
 				The first line is normal,<br />
 				but the second and third line is hanging, even if it's due to wrap.
 			</p>
-			<p>(Note: this relies on the browser supporting <code>text-indent</code>.)</p>
+			<p>
+				<b>NOTE</b>: this relies on the browser supporting the <code>hanging</code>
+				value for <code>text-indent</code>, but not every browser does.
+			</p>
 		</div>
 	</body>
 </html>

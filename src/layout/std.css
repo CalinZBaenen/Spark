@@ -6,6 +6,14 @@
 
 /* Default style for all elements. */
 * {
+	/*
+	* `max-height` and `max-width` to fix quirks of some
+	*  user-agent styles.
+	*
+	* Incited by: https://www.youtube.com/watch?v=yZT9906ZCLU.
+	*/
+	max-height:100%;
+	max-width:100%;
 	height:fit-content;
 	width:fit-content;
 	
@@ -26,6 +34,20 @@ body, html {
 	
 	height:100%;
 	width:100%;
+}
+
+
+
+/* Default look for horizontal-rules. */
+hr {
+	border:none;
+	height:0.5px;
+	width:100%;
+	
+	background-color:black;
+	background-color:currentColor;
+	color:black;
+	color:currentColor;
 }
 
 
@@ -59,3 +81,27 @@ body, html {
 	user-select:auto;
 	-webkit-user-drag:auto;
 }
+
+
+
+/**
+* Makes an element an inline element.
+*/
+*[data-flow~="inline"], *[data-cascade~="flow"][data-flow~="inline"] * { display:inline; }
+
+
+
+/**
+* Makes an element a block element.
+*/
+*[data-flow~="block"], *[data-cascade~="flow"][data-flow~="block"] * { display:block; }
+
+
+
+
+
+/**
+* Makes an element an inline-block element.
+*/
+*[data-flow~="inline"][data-flow~="block"],
+*[data-cascade~="flow"][data-flow~="inline"][data-flow~="block"] * { display:inline-block; }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en-US">
+	<head>
+		<meta http-equiv="Content-Type" charset="UTF-8" content="text/html; charset=UTF-8" />
+		<meta content="initial-scale=1, height=device-height, width=device-width" name="viewport" />
+		
+		<title>Layout Demonstration</title>
+		
+		<link href="../src/layout/prelude.css" type="text/css" rel="stylesheet" />
+		
+		<link href="./.assets/site_specific.css" type="text/css" rel="stylesheet" />
+		
+		<style>
+			.box-container {
+				background-color:red;
+				justify-content:space-between;
+				width:100%;
+			}
+			.box-container:nth-child(2n) { background-color:blue; }
+			
+			.box-container > div {
+				background-color:white;
+				min-height:50px;
+				overflow:scroll;
+				width:17.5%;
+			}
+		</style>
+	</head>
+	
+	
+	
+	<body>
+		<div data-padding="char" class="box-container" data-flow="flex wrap row">
+			<div>
+				<p data-ham>This container should</p>
+			</div>
+			<div>
+				<p data-ham>only span one</p>
+			</div>
+			<div>
+				<p data-ham>row in total,</p>
+			</div>
+			<div>
+				<p data-ham>except with small(er)</p>
+			</div>
+			<div>
+				<p data-ham>viewport sizes.</p>
+			</div>
+		</div>
+		
+		<div data-padding="char" class="box-container" style="gap:1em;" data-flow="flex wrap row">
+			<div>
+				<p data-ham>This container</p>
+			</div>
+			<div>
+				<p data-ham>should always</p>
+			</div>
+			<div>
+				<p data-ham>span more</p>
+			</div>
+			<div>
+				<p data-ham>than one</p>
+			</div>
+			<div>
+				<p data-ham>row at</p>
+			</div>
+			<div>
+				<p data-ham>a time.</p>
+			</div>
+		</div>
+	</body>
+</html>

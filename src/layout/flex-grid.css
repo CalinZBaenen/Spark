@@ -1,3 +1,9 @@
+@charset "UTF-8";
+
+
+
+
+
 /**
 * Stretches flex-items to fit their container.
 */
@@ -10,6 +16,16 @@
 */
 *[data-flow~="evenly-spaced-children"],
 *[data-cascade~="flow"][data-flow~="evenly-spaced-children"] * { justify-content:space-evenly; }
+
+
+
+/**
+* Makes flex containers wrap (in reverse).
+*/
+*[data-flow~="r-wrap"], *[data-cascade~="flow"][data-flow~="r-wrap"] * {
+	-ms-flex-wrap:wrap-reverse;
+	flex-wrap:wrap-reverse;
+}
 
 
 
@@ -38,6 +54,16 @@
 	display:-moz-grid;
 	display:-ms-grid;
 	display:grid;
+}
+
+
+
+/**
+* Makes flex containers wrap.
+*/
+*[data-flow~="wrap"], *[data-cascade~="flow"][data-flow~="wrap"] * {
+	-ms-flex-wrap:wrap;
+	flex-wrap:wrap;
 }
 
 

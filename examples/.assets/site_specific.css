@@ -3,7 +3,10 @@ table + * { margin-top:1.5rem; }
 
 
 /* Background color. */
-body { background-color:rgb(170, 170, 255); }
+body {
+	background-color:rgb(170, 170, 255);
+	font-family:"Arial", sans-serif;
+}
 
 
 /* Default margins for headers. */

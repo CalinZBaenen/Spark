@@ -80,7 +80,7 @@
 * @uncascadale
 * 
 * Default display for code. */
-*[data-textstyle~="code"] {
+*[data-textstyle~="code"], code {
 	font-display:swap;
 	font-variant:normal;
 	font-family:monospace;
@@ -234,20 +234,4 @@
 *[data-cascade~="textstyle"][data-textstyle~="o"][data-textstyle~="s"][data-textstyle~="u"] {
 	-moz-text-decoration-line:overline line-through underline;
 	text-decoration-line:overline line-through underline;
-}
-
-
-
-
-
-/* Default look for horizontal-rules. */
-hr {
-	border:none;
-	height:0.5px;
-	width:100%;
-	
-	background-color:black;
-	background-color:currentColor;
-	color:black;
-	color:currentColor;
 }

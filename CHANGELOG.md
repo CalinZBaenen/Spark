@@ -1,19 +1,16 @@
-- Added the *Cons* section to the README file's table of contents.  
-- Gave Spark its (new) logo.
+- Updated the `text.html` example.  
+- Added an example, `layout.html`, that shows off the layout features.  
+- Added `font-family:sans-serif` in `examples/.assets/site_specific.css`.  
+- Capitalized the "US" in "`en-us`" in the example files.
 
-- Headings, group one to six, no longer have their font size changed by
-   default.  
-- The body no longer uses a flex layout by default.  
-- Added `indented` value for `data-textstyle`.  
-- Removed `data-hanging` and added the `hanging` adjective (of `indented`)
-   for `data-textstyle`.  
-- Removed `data-fullwidth` and `data-sticky`.  
-- Removed the `iblock` and `inline` values for the `data-flow` attribute.  
-- Added `data-cascade`, which allows you to apply any of same styles to all
-   of an element's descendants — the styles to cascade are specified by
-   using an attribute's name as a value.  
-- Removed `data-pixelated-children` and `data-crisp-children` in favor of
-   the behavior provided by `data-cascade`.  
-- Changed the default style of `<hr>`s in `text/text.css`.  
-- Added more support for the flex layout (using `data-flow="flex"`) in
-   older browsers.
+- `<code>` now acts as though it had `data-textstyle="code"` applied.  
+- Moved the default styling for `<hr>`s from `text/text.css` to
+   `layout/std.css`.  
+- Added `@charset "UTF-8"` to the top of the CSS files that were
+   missing it.  
+- Added the `wrap` and `r-wrap` values for `data-flow`, which adds a way to
+   make flex-containers wrap normally or in reverse.  
+- Added the `inline` and `block` values for `data-flow`, which can be
+   combined.  
+- Added the `char` value for `data-padding`, which gives elements the
+   padding of (about) one character.
