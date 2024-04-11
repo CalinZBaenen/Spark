@@ -31,7 +31,7 @@ Spark is created to be simple to use and support as many web-browsers as
 
     Last Updated: 2024/04/10
     Code Size:    84KB
-    Version:      2.3.0
+    Version:      2.3.1
 
 ## What does Spark provide styles for?
 
